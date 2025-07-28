@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url('sunset.png');
+                background-size: cover;
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            h1{
+                color: white;
+                text-align: center;
+                align-items: center;
+                font-size: 36px;
+            }
+            p {
+                color: white;
+                text-align: center;
+                align-items: center;
+                font-size: 36px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> HAPPY BIRTHDAY TO YOU</h1>
+        <p id = "wishDisplay"> </p>
+        <script>
+            const wish = sessionStorage.getItem("userWish");
+            document.getElementById("wishDisplay").textContent = wish || "  ";
+        </script>
+    </body>
+</html>

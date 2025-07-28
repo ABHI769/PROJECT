@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title> WISH</title>
+        <style>
+            body {
+                background-image: url('image.png');
+                background-size: cover;
+            }
+            .center-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 60vh;
+            }
+            input {
+                font-size: 20px;
+                text-align: center;
+                padding: 10px;
+                width: 300px;
+            }
+            .button-group {
+                display: flex;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            h2{
+                width: 300px; 
+                height: 35px; 
+                background-color: bisque; 
+                padding: 10px;
+                text-align: center;
+                color: black;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <br>
+        <div class="center-container">
+            <h2> ENTER THE NAME </h2>
+            <br>
+            <input type="text" id="wishInput" placeholder=" HERE " /><br><br>
+            <div class ="button-group"> 
+                <button onclick="wish1()"> SUNSET </button>
+                <button onclick="wish2()"> CONFETTI </button>
+                <button onclick="wish3()"> GALAXY </button>
+            </div>
+        </div>
+        <br><br>
+        <script>
+            function wish1(){
+                const wish = document.getElementById("wishInput").value;
+                sessionStorage.setItem("userWish", wish);
+                window.location.href = "demo1.html"; 
+            }
+        </script>
+        <br><br>
+        <script>
+            function wish2(){
+                const wish = document.getElementById("wishInput").value;
+                sessionStorage.setItem("userWish", wish);
+                window.location.href = "demo2.html"; 
+            }
+
+        </script>
+        <br><br>
+        <script>
+            function wish3(){
+                const wish = document.getElementById("wishInput").value;
+                sessionStorage.setItem("userWish", wish);
+                window.location.href = "demo3.html"; 
+            }
+        </script>
+
+    </body>
+</html>
